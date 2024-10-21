@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-ceintl.vscode-language-pack-zh-hans",
+        "mhutchie.git-graph",
+        "ms-python.isort",
+        "slightc.pip-manager",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "donjayamanne.python-environment-manager",
+        "ms-python.black-formatter",
+        "editorconfig.editorconfig"
+    ]
+}

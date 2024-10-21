@@ -1,0 +1,28 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit"
+	},
+	"isort.args": [
+		"--profile",
+		"black"
+	],
+	"python.analysis.autoFormatStrings": true,
+	"python.languageServer": "Pylance",
+	"git.postCommitCommand": "push",
+	"git.rebaseWhenSync": true,
+	"files.exclude": {
+		".gitattributes": true,
+		".gitignore": true,
+		"**/__pycache__": true,
+		"**/.editorconfig": true,
+		"**/.venv": true,
+		"**/.vscode": true,
+		"**/build": true,
+		"**/dist": true
+	},
+	"files.autoSave": "afterDelay",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	}
+}
