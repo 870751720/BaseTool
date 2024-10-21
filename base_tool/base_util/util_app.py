@@ -4,6 +4,7 @@ import sys
 
 os.environ["QT_API"] = "pyside6"
 os.environ["QT_FONT_DPI"] = "96"
+os.environ["PYDEVD_DISABLE_FILE_VALIDATION"] = "1"
 
 from qtpy.QtCore import QTranslator
 from qtpy.QtGui import QIcon, QPixmap

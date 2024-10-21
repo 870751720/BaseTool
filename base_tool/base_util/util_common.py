@@ -1,11 +1,12 @@
 import cgitb
 import functools
+import multiprocessing
 import os
 import sys
 import threading
 import time
 import traceback
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 
 
 class Singleton(type):
@@ -75,4 +76,14 @@ def do_funcs_by_threadpool(worker, argsList):
         futures = [executor.submit(worker, args) for args in argsList]
         for future in futures:
             results.append(future.result())
+    return results
+
+
+def do_funcs_by_multiprocessing(worker, argsList, count_split=1):
+
+    with ProcessPoolExecutor(
+        max_workers=int(multiprocessing.cpu_count() / count_split)
+    ) as executor:
+        results = list(executor.map(worker, argsList))
+
     return results
