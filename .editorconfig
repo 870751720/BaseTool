@@ -1,4 +1,4 @@
 root = true
 
 [*.py]
-indent_style = space
+indent_style = tab
